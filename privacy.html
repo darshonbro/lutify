@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — LUTIFY Discord Application</title>
+  <meta name="description" content="Privacy Policy detailing data collection, processing, and retention practices for LUTIFY Discord Application.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </div>
+        <span class="brand-text">LUTIFY</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="terms.html" class="nav-link">Terms of Service</a>
+        <a href="privacy.html" class="nav-link active">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Legal Body -->
+  <main class="main-wrapper">
+    <article class="legal-container">
+      <header class="legal-header">
+        <h1 class="page-title" style="margin-bottom: 0.5rem;">Privacy Policy</h1>
+        <div class="legal-meta">
+          <span>Effective Date: October 15, 2026</span>
+          <span>&bull;</span>
+          <span>Version: 2.1</span>
+        </div>
+      </header>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">01.</span> Introduction</h2>
+        <p class="legal-p">
+          This Privacy Policy describes how the <strong>LUTIFY</strong> Discord bot ("Application", "Service", "we", "our") collects, uses, processes, and protects information when you integrate the Application into your Discord server or interact with our commands.
+        </p>
+        <p class="legal-p">
+          We prioritize data minimization. We only collect the technical identifiers strictly necessary to provide real-time audio streaming and playback state management.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">02.</span> Information We Collect</h2>
+        <p class="legal-p">
+          When interacting with the Application, the following data may be processed:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Guild (Server) Identifiers:</strong> Discord Guild IDs required to associate queues, active player instances, and volume settings with your server.</li>
+          <li><strong>Channel Identifiers:</strong> Text and Voice Channel IDs to route audio streams, post player control cards, and reconnect 24/7 persistent voice sessions.</li>
+          <li><strong>User Identifiers:</strong> Discord User IDs to display who requested a track in the player embed, manage queue authorization, and enforce command rate limits.</li>
+          <li><strong>Playback Metadata:</strong> Track titles, durations, and URIs required to maintain the active queue and track history for autoplay recommendations.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">03.</span> Information We Explicitly DO NOT Collect</h2>
+        <div class="callout">
+          <p>
+            <strong>Zero Audio Recording Commitment:</strong> LUTIFY sends audio packets to Discord voice channels; it never receives, records, stores, analyzes, or transmits voice communication from users in the voice channel.
+          </p>
+        </div>
+        <p class="legal-p">
+          We do not collect or process:
+        </p>
+        <ul class="legal-list">
+          <li>Voice audio streams, speech data, or microphone input from any participant.</li>
+          <li>Personal identifying information such as real names, email addresses, phone numbers, or passwords.</li>
+          <li>Private message content (DMs) or messages in channels unrelated to bot commands.</li>
+          <li>Financial or billing details.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">04.</span> How Data is Used & Stored</h2>
+        <p class="legal-p">
+          Collected technical identifiers are utilized solely for core functionality:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Volatile In-Memory Storage:</strong> Active song queues, volume levels, and playback timestamps reside exclusively in volatile RAM and are automatically purged when playback stops or the bot restarts.</li>
+          <li><strong>Persistent Configuration:</strong> Servers with the 24/7 feature explicitly enabled store their Guild ID and Voice Channel ID in a local configuration file to allow automatic reconnection upon bot restarts.</li>
+          <li><strong>Anti-Abuse Debouncing:</strong> User IDs are stored in temporary in-memory caches for rate-limiting purposes to prevent denial-of-service and Discord gateway throttling.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">05.</span> Third-Party Services</h2>
+        <p class="legal-p">
+          To deliver audio services, LUTIFY interfaces with:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Discord API:</strong> For receiving slash/prefix command interactions and establishing voice gateway sockets.</li>
+          <li><strong>Lavalink Nodes:</strong> Remote or dedicated audio encoding servers that resolve streaming endpoints from external media platforms (e.g. YouTube, Spotify, SoundCloud). Only track search queries and identifiers are passed to these nodes.</li>
+        </ul>
+        <p class="legal-p">
+          We do not sell, rent, monetize, or disclose user or guild data to third-party advertisers, data brokers, or external entities.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">06.</span> Data Retention & Right to Erasure (Deletion Requests)</h2>
+        <p class="legal-p">
+          Users and server administrators possess complete rights regarding their stored data:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Automatic Deletion:</strong> Kicking or banning the bot from your Discord server halts all data operations. In-memory queue states are instantly terminated.</li>
+          <li><strong>24/7 Configuration Deletion:</strong> Running the <code>!247</code> command to disable persistent mode immediately removes the server's record from persistent storage.</li>
+          <li><strong>Manual Data Purge Requests:</strong> Server owners may request immediate erasure of any stored identifiers by contacting our administration via our Discord Support Server. Requests are processed within 48 hours.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">07.</span> GDPR & Children's Privacy</h2>
+        <p class="legal-p">
+          The Application is not directed toward individuals under the age of 13 (or the minimum legal age required to use Discord within your jurisdiction). We do not knowingly collect personal data from minors.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">08.</span> Policy Updates</h2>
+        <p class="legal-p">
+          We may update this Privacy Policy periodically to reflect architectural changes or regulatory compliance. Any revisions will be published here with an updated revision date.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2 class="legal-h2"><span class="legal-h2-number">09.</span> Contact Us</h2>
+        <p class="legal-p">
+          If you have questions or concerns regarding this Privacy Policy or wish to submit a data removal request, please reach out via our community support server:
+        </p>
+        <p class="legal-p">
+          <strong>Official Support:</strong> <a href="https://discord.gg/B6tjpYqxyb" target="_blank" style="color: var(--text-primary); text-decoration: underline;">discord.gg/B6tjpYqxyb</a>
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span>LUTIFY Audio Systems &bull; Discord Application Infrastructure</span>
+      <div class="footer-links">
+        <a href="terms.html" class="footer-link">Terms</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://discord.gg/B6tjpYqxyb" target="_blank" class="footer-link">Support Server</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
